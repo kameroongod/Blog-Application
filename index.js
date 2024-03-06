@@ -78,3 +78,5 @@ app.listen(port, () => {
     console.log(`Listening on port: ${port}`)
 });
 
+// To use Vercel
+module.exports = app
