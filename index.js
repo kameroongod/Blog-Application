@@ -16,9 +16,6 @@ app.use(express.static("public"));
 // To be able to process requests prior and extract data from request
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.set('view engine', 'ejs');
-
-
 // Landing on main page
 app.get("/", (req, res) =>{
     res.render("index.ejs")
