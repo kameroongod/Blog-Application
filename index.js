@@ -11,7 +11,10 @@ const app = express();
 var __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Pointing to correct path for static files
-app.use(express.static("public"));
+//app.use(express.static("public"));
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));
 
 // To be able to process requests prior and extract data from request
 app.use(bodyParser.urlencoded({extended:true}));
