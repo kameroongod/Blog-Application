@@ -44,7 +44,7 @@ app.post("/submit", (req, res) =>{
 fs.readdir(__dirname + "/public/images/", (err, files) => {
     files.forEach((file) => {
         // Every static file has to be referenced from the public folder
-        imagesPath.push(__dirname + "/public/images/" + file)})
+        imagesPath.push("/images/" + file)})
 });
 
 setTimeout(()=>{
